@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Amatic+SC">
+<link rel="stylesheet" href="aos-by-red.css">
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+<style>
+
+body, html {
+	height: 100%
+	}
+body,h1,h2,h3,h4,h5,h6 {
+	font-family: "Amatic SC", sans-serif
+	}
+.parallax {
+  /* The image used */
+  background-image: url("thighs.jpeg");
+
+  /* Set a specific height */
+  min-height: 1000px; 
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+.containerAOS{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  flex-direction: column;
+}
+.content {
+  position: absolute;
+  bottom: 0;
+  background: rgb(0, 0, 0); /* Fallback color */
+  background: rgba(0, 0, 0, 0.5); /* Black background with 0.5 opacity */
+  color: #f1f1f1;
+  width: 100%;
+  padding: 20px;
+}
+	.div{
+  height: 300px;
+  width: 300px;
+  display: flex;
+  color: white;
+  margin: 100px 0;
+}
+</style>
+	
+</head>
+<body>
+
+
+<div class="parallax"></div>
+
+ <div style="position: absolute;background: rgb(0, 0, 0);background: rgba(0, 0, 0, 0.5);color: #f1f1f1;width: 100%;padding: 20px;">
+ <div class="w3-container w3-right" data-aos="fade-left" data-aos-duration="1000" data-aos-once="false">
+  <h1>Animation is Fun!</h1>
+  <p>The w3-animate-right class slides in an element from the right.</p>
+ </div>
+ </div>
+	
+<div class="parallax"></div>
+
+ <div style="position: absolute;background: rgb(0, 0, 0);background: rgba(0, 0, 0, 0.5);color: #f1f1f1;width: 100%;padding: 20px;">
+ <div class="w3-container w3-right w3-animate-right">
+  <h1>Animation is Fun!</h1>
+  <p>The w3-animate-right class slides in an element from the right.</p>
+ </div>
+ </div>
+	
+<div class="parallax"></div>
+
+<div style="height:500px;background-color:red;font-size:36px">
+Scroll Up and Down this page to see the parallax scrolling effect.
+This div is just here to enable scrolling.
+Tip: Try to remove the background-attachment property to remove the scrolling effect.
+</div>
+	 <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+	<script>
+      AOS.init({
+        duration: 3000,
+        once: true,
+      });
+		</script>
+</body>
+</html>

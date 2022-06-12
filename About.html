@@ -1,0 +1,371 @@
+<!doctype html>
+<html>
+<head>
+	
+<meta charset="utf-8">
+	<title>About</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+</head>
+	
+
+	<style>
+	@font-face{
+	src: url("Fonts/Joan/Joan-Regular.ttf");
+    font-family:Joan;
+	}
+	
+	@font-face{
+	src: url("Fonts/fany_harlley/Fany Harlley.ttf");
+	font-family:fany_harlley;
+	}
+	
+
+body,h1,h2,h3,h4,h5,h6 {font-family: "Joan", sans-serif}
+
+#h1,#h2,#h3,#h4,#h5,#h6 {font-family: "fany_harlley", sans-serif}
+
+* {box-sizing: border-box}
+body {font-family: Joan, sans-serif; margin:0}
+.mySlides {display: none}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}
+</style>
+	<style>
+* {box-sizing: border-box}
+body {font-family: Joan, sans-serif; margin:0}
+.mySlides {display: none}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}
+</style>
+<body style="background: rgb(242, 232, 220);margin:0;">
+
+
+	<div class="w3-top">
+  		<div class="w3-bar  w3-white w3-wide w3-padding w3-card">
+    		<a href="index.html"  class="w3-bar-item w3-button"> AHMAD AMIER</a>
+    <!-- Float links to the right. Hide them on small screens -->
+    		<div class="w3-right w3-hide-small">
+      		<a href="index.html"  class="w3-bar-item w3-button">Home</a>
+      		<a href="About.html"  class="w3-bar-item w3-button">About</a>
+      		<a href="Contacts.html"  class="w3-bar-item w3-button">Contact</a>
+    		</div>
+  		</div>
+	</div>
+	<br><br><br>
+	<div class="w3-center w3-padding-24 w3-margin-top">
+	  <img src="ABOUT1.jpg" alt="Ocean" class="w3-image" width="500" height="250">
+	</div>
+
+	<div class="w3-white w3-padding-large w3-padding-24 w3-margin-top">
+    <h3 class="w3-center">ABOUT ME</h3>
+    <hr>
+			<div class="w3-padding-24 w3-margin-top" style="margin-left: 200px; margin-right: 200px">
+    <p>I'm just a guy living a student life day by day in my university's dormatory and occasionally doodle on any medium I can get my hands on. I mostly post my sketches and illustrations online, with a bit of other projects spliced within the mix. I started creating illustrations when i was in highschool. Back then, I was influenced by dozens of artist and illustrators I followed online.</p>
+    <p>I lived a rather mundane life where I never utilised my creativity for anthing other than work. due to that starting was rather scary. However once I started my work, it was smooth sailing from there. to hone my art, i watched and studied artists and through process of trial and error, it led me to become the illustrator I am today.</p>
+  </div>
+		</div>
+		
+	<div class="w3-content" style="max-width:1100px">
+   <div class="w3-row w3-padding-64" id="about">
+	   	   
+	   	   
+    <div class="w3-col m6 w3-padding-large w3-hide-small">
+<div class="slideshow-container">
+
+<div class="mySlides fade">
+  <div class="numbertext">1 / 2</div>
+  <img src="face.jpeg" style="width:100%">
+  <div class="text">Sauce hunting</div>
+</div>
+
+
+	<div class="mySlides fade">
+  <div class="numbertext">2 / 2</div>
+  <video style="width: 100%" controls><source src="vid.mp4" type="video/mp4"></video>  
+	  <div class="text">Outing with friends</div>
+</div>
+
+
+<a class="prev" onclick="plusSlides(-1)">❮</a>
+<a class="next" onclick="plusSlides(1)">❯</a>
+
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span> 
+  <span class="dot" onclick="currentSlide(2)"></span> 
+
+
+</div>	</div>
+	   <div class="w3-col m6 w3-padding-large">
+      <h1 class="w3-center">"What drives me"</h1><br>
+      <p class="w3-large">When I'm active online, I get motivated by seeing peoples art and illustrations so much that I want to try making something similar but unique myself. I mostly browse through platforms such as Pinterest, Instagram, Pixiv, Twitter and Tumbler in order to get inspiration.</p>
+      <p class="w3-large">I also spend a lot of time travelling and going out for outings with my friends and family. The time spent and the pictures taken in that trip made me compelled to tinker with the photo to make it more impactful.</p>
+<div class="w3-container">
+  		<h2 class="w3-center">Fuel</h2><br>
+<table class="w3-table-all">
+  <tr style="background: rgb(242, 232, 220)">
+      	<th></th>
+      	<th>Somewhat&nbsp; &nbsp;</th>
+		<th>Yes&nbsp;</th>
+		<th>Absolutely&nbsp;</th>
+    	</tr>
+    	<tr style="background: rgb(242, 232, 220)">
+      	<td>Food&nbsp;</td>
+      	<td style="background: rgb(166, 122, 91)"></td>
+		<th style="background: rgb(166, 122, 91)"></th>
+	    <th style="background: rgb(166, 122, 91)"></th>
+    	</tr>
+    	<tr style="background: rgb(242, 232, 220)">
+      	<td>TV Shows</td>
+      	<td style="background: rgb(166, 122, 91)">&nbsp;</td>
+      	<td class="w3-center" style="background: rgb(166, 122, 91)">&nbsp;</td>
+		<td style="background: rgb(166, 122, 91)">&nbsp;</td>
+    	</tr>
+		<tr style="background: rgb(242, 232, 220)">
+      	<td>Books</td>
+      	<td style="background: rgb(166, 122, 91)">&nbsp;</td>
+		<td style="background: rgb(166, 122, 91)">&nbsp;</td>
+		<td style="background: rgb(242, 232, 220)">&nbsp;</td>
+    	</tr>
+		<tr style="background: rgb(242, 232, 220)">
+      	<td></td>
+      	<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+
+    	</tr>
+		</table>
+</div>
+    </div>
+   </div>
+	</div>
+</body>
+	
+	<script>
+let slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+</script>
+<footer class="w3-center w3-padding-24 w3-large" style="background: rgb(193, 154, 107)">
+	<div class="w3-content" style="max-width:1100px">
+   		<div class="w3-row" id="footer">
+    		<div class="w3-col m6 w3-padding-large w3-hide-small w3-left-align">
+	  			<div class="w3-container" id="leftside">
+					<div class="w3-large w3-section w3-left-align w3-padding">
+					<a href="index.html"   class="w3-hover-text-amber">Home</a><br>
+	    			<a href="About.html"   class="w3-hover-text-amber">About</a><br>
+	    			<a href="Contacts.html"  class="w3-hover-text-amber">Contact</a><br>
+					</div>
+				</div>
+			</div>
+	    	<div class="w3-col m6 w3-padding-large w3-hide-small w3-right-align">
+				<div class="w3-container" id="rightside">
+  					<div class="w3-xlarge w3-section w3-right-align w3-padding">
+    					<a href="https://instagram.com/mier_murtazza?igshid=YmMyMTA2M2Y=" target="_blank"><i class="fa fa-instagram w3-hover-opacity"></i></a><br>
+    					<a href="https://pin.it/4vGPSt2" target="_blank"><i class="fa fa-pinterest-p w3-hover-opacity"></i></a><br>
+    					<a href="https://twitter.com/Mier07762801?t=gp5h3agqluMxSUER_YxSWA&s=09" target="_blank"><i class="fa fa-twitter w3-hover-opacity"></i></a><br>
+  					</div>
+				</div>
+			</div>
+	   </div>
+		<hr class="w3-border-amber">
+		  <p>Copyright © 2020 Ahmad Amier Murtazza Bin Busu</p>
+	</div>
+</footer>
+</html>

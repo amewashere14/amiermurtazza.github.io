@@ -1,0 +1,531 @@
+<!doctype html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Amatic+SC">
+	<link rel="stylesheet" href="aos-by-red.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+<style>
+
+	@font-face{
+	src: url("Fonts/Joan/Joan-Regular.ttf");
+    font-family:Joan;
+	}
+	
+	@font-face{
+	src: url("Fonts/fany_harlley/Fany Harlley.ttf");
+	font-family:fany_harlley;
+	}
+	
+body, html {
+	height: 100%
+	}
+body,h1,h2,h3,h4,h5,h6 {font-family: "Joan", sans-serif}
+
+#h1,#h2,#h3,#h4,#h5,#h6 {font-family: "fany_harlley", sans-serif}
+
+
+* {
+  box-sizing: border-box;
+}
+
+
+	
+img {
+  vertical-align: middle;
+}
+
+/* Position the image container (needed to position the left and right arrows) */
+.container {
+  position: relative;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Add a pointer when hovering over the thumbnail images */
+.cursor {
+  cursor: pointer;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 40%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* Container for image text */
+.caption-container {
+  text-align: center;
+  background-color: #222;
+  padding: 2px 16px;
+  color: white;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Six columns side by side */
+.column {
+  float: left;
+  width: 16.66%;
+}
+
+/* Add a transparency effect for thumnbail images */
+.demo {
+  opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
+	
+
+
+.parallax {
+  /* The image used */
+  background-image: url('home.jpg');
+
+  /* Full height */
+  height: 100%; 
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+	.parallax2 {
+  /* The image used */
+  background-image: url('home1.jpeg');
+
+  /* Full height */
+  height: 100%; 
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+		.parallax3 {
+  /* The image used */
+  background-image: url('work1.jpg');
+
+  /* Full height */
+  height: 100%; 
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  width: 40%;
+  align-content: center;
+}
+
+	
+</style>
+<style>
+
+.overlayUpwards {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #008CBA;
+  overflow: hidden;
+  width: 100%;
+  height:0;
+  transition: .5s ease;
+}
+
+.containerOverlay:hover .overlayUpwards {
+  bottom: 0;
+  height: 100%;
+}
+  .containerOverlay {
+  position: relative;
+  width: 100%;
+}
+
+.imageOverlay {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.overlay {
+  position: absolute;
+  bottom: 100%;
+  left: 0;
+  right: 0;
+  background-color: #008CBA;
+  overflow: hidden;
+  width: 100%;
+  height:0;
+  transition: .5s ease;
+}
+
+.containerOverlay:hover .overlay {
+  bottom: 0;
+  height: 100%;
+}
+
+.textOverlay {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+</style>
+
+<meta charset="utf-8">
+<title>protoype</title>
+
+
+</head>
+<body>
+
+	<div class="w3-top">
+  		<div class="w3-bar  w3-white w3-wide w3-padding w3-card">
+    		<a href="index.html"  class="w3-bar-item w3-button"> AHMAD AMIER</a>
+    <!-- Float links to the right. Hide them on small screens -->
+    		<div class="w3-right w3-hide-small">
+      		<a href="index.html"  class="w3-bar-item w3-button">Home</a>
+      		<a href="About.html"  class="w3-bar-item w3-button">About</a>
+      		<a href="Contacts.html"  class="w3-bar-item w3-button">Contact</a>
+    		</div>
+  		</div>
+	</div>
+	<div class="w3-display-middle">
+    	<h1 class=" w3-animate-top" style="font-family: fany_harlley; font-size: 150px;color: #f1f1f1">Welcome</h1>
+    	<hr class="w3-border-white" style="margin:auto;width:40%">
+    	<p class="w3-large w3-center" style="color: #f1f1f1">This is my personal website</p>
+  	</div>
+	<div class="parallax"></div>
+
+ <div style="position: absolute;background: rgb(44, 53, 57);color: #f1f1f1;width: 100%;padding: 20px;">
+	 <div class="w3-row w3-padding-16" id="intro">
+<div class="w3-col m6 w3-padding-large w3-hide-small"></div>
+<div class="w3-col m6 w3-padding-large"> 
+<div class="w3-container w3-right w3-animate-right" data-aos="fade-left" data-aos-duration="1000" data-aos-once="false">
+	 <h1 class="w3-center">A mix of everything</h1>
+	  <hr class="w3-border-grey" style="margin:auto;width:40%">
+  <p>"The Jack of all trade but a Master of None". I’m an illustrator, a photographer, a novice web-designer and a lifetime student. I'm a stickler towards my art. I have a handful of skills and had experiance in multimedia and I'm eager for what's next. </p>
+</div>
+ </div>
+ </div>
+	</div>
+	<div class="parallax2"></div>
+
+ <div style="position: absolute;background: rgb(44, 53, 57);color: #f1f1f1;width: 100%;padding: 20px;">
+<div class="w3-row w3-padding-32">
+<div class="w3-col m6 w3-padding-large w3-hide-small">
+ <div class="w3-container w3-left w3-animate-left" style="width:100%" data-aos="slide-right" data-aos-duration="1000" data-aos-once="false">
+  <h1>Skills I "dabble" in</h1><hr>
+ 
+	 <h3>A Little more of what I do:-</h3>
+	 <ul>
+  	 	<li>Digital Illustration</li>
+  	 	<li>Web Design</li>
+  	 	<li>Photoshop</li>
+	 </ul>  
+	 <br>
+	 
+	  <p class="w3-large"><b><i class="fas fa-certificate fa-fw w3-margin-right w3-text-teal"></i>Skills</b></p>
+          <p>Digital Illustration</p>
+          <div class="w3-light-grey w3-round-xlarge w3-small">
+            <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width:90%">90%</div>
+          </div>
+          <p>Web Design</p>
+          <div class="w3-light-grey w3-round-xlarge w3-small">
+            <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width:80%">
+              <div class="w3-center w3-text-white">80%</div>
+            </div>
+          </div>
+          <p>Photoshop</p>
+          <div class="w3-light-grey w3-round-xlarge w3-small">
+            <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width:75%">75%</div>
+          </div>
+
+	 </div>
+	</div>
+	<div class="w3-col m6 w3-padding-large">
+	<div class="w3-container" id="contact" data-aos="zoom-in" data-aos-duration="1000" data-aos-once="false">
+	 <h2 style="text-align:center">My Works</h2>
+
+<div class="container">
+  <div class="mySlides" style align="center">
+    <div class="numbertext">1 / 6</div>
+    <img src="work1.jpg" style="width:100%" >
+  </div>
+
+  <div class="mySlides" style align="center">
+    <div class="numbertext">2 / 6</div>
+    <img src="work2.jpg" style="width:30%">
+  </div>
+
+  <div class="mySlides" style align="center">
+    <div class="numbertext">3 / 6</div>
+    <img src="work3.jpg" style="width:30%">
+  </div>
+    
+  <div class="mySlides" style align="center">
+    <div class="numbertext">4 / 6</div>
+    <img src="work4.jpg" style="width:40%">
+  </div>
+
+  <div class="mySlides" style align="center">
+    <div class="numbertext">5 / 6</div>
+    <img src="work5.jpg" style="width:50%">
+  </div>
+    
+  <div class="mySlides" style align="center">
+    <div class="numbertext">6 / 6</div>
+    <img src="work6.jpg" style="width:30%">
+  </div>
+    
+  <a class="prev" onclick="plusSlides(-1)">❮</a>
+  <a class="next" onclick="plusSlides(1)">❯</a>
+
+  <div class="caption-container">
+    <p id="caption"></p>
+  </div>
+
+  <div class="row">
+    <div class="column">
+      <img class="demo cursor" src="work1.jpg" style="width:50%" onclick="currentSlide(1)" >
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="work2.jpg" style="width:50%" onclick="currentSlide(2)" >
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="work3.jpg" style="width:50%" onclick="currentSlide(3)" >
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="work4.jpg" style="width:50%" onclick="currentSlide(4)">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="work5.jpg" style="width:50%" onclick="currentSlide(5)" >
+    </div>    
+    <div class="column">
+      <img class="demo cursor" src="work6.jpg" style="width:50%" onclick="currentSlide(6)">
+    </div>
+  </div>
+</div>
+
+<script>
+let slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("demo");
+  let captionText = document.getElementById("caption");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  captionText.innerHTML = dots[slideIndex-1].alt;
+}
+</script>
+ </div>
+ </div>
+	</div>
+	 </div>
+		<div class="parallax3"></div>
+	
+ <div style="position: absolute;background: rgb(44, 53, 57);color: #f1f1f1;width: 100%;padding: 20px;">
+   <div class="w3-container w3-center">
+  <hr>
+  <h3>Artists I look Follow:</h3>
+</div>
+
+<div class="w3-row-padding" > 
+
+<div class="w3-third" align="center">
+<div class="card" data-aos="fade-up" data-aos-duration="1000" data-aos-once="false" >
+  <div class="containerOverlay">
+  <img src="tokiwamidoripfp.jpg" class="imageOverlay" alt="tokiwa" style="width:100%">
+  <div class="overlay">
+  <div class="textOverlay">
+	  <a href="https://twitter.com/tokiwa__midori?t=uo-ujwjQClJNMyhrAAJR3g&s=09" target="_blank">View Artist's Work</a></div>
+  </div>
+  </div>
+  <div class="w3-container">
+  <p>Tokiwa Midori</p>
+  </div>
+</div>
+</div>
+
+<div class="w3-third" align="center">
+<div class="card" data-aos="fade-up" data-aos-duration="1000" data-aos-once="false" data-aos-delay="100">
+	<div class="containerOverlay">
+  <img src="heriopfp.jpg" alt="herio" class="imageOverlay" style="width:100%">
+	<div class="overlayUpwards">
+    <div class="textOverlay">
+		<a href="https://twitter.com/herioscope?t=683MBEuQb9efz8uaqnHkXw&s=09" target="_blank">View Artist's Work</a>
+		</div>
+	</div>
+  </div>
+  <div class="w3-container">
+  <p>Herio</p>
+  </div>
+</div>
+</div>
+
+<div class="w3-third" align="center">
+<div class="card" data-aos="fade-up" data-aos-duration="1000" data-aos-once="false" data-aos-delay="150">
+  <div class="containerOverlay">
+  <img src="kurosupfp.jpg" alt="Kurosu" class="imageOverlay" style="width:100%">
+  <div class="overlay">
+  <div class="textOverlay">
+  <a href="https://twitter.com/kurosugatari?t=a21pbleVFIzk35_2WC7TZg&s=09" target="_blank">View Artist's Work</a></div>
+  </div>
+  </div>
+  <div class="w3-container">
+  <p>Kurosu Gatari</p>
+  </div>
+</div>
+</div>
+</div>
+	 </div>
+			<div class="parallax3"></div>
+	
+	<div class="w3-container w3-align-center" style="background: rgb(44, 53, 57);width: 100%;padding: 20px;">
+
+  <h2 style="color: white">FAQ</h2>
+		<br><hr>
+
+  <table class="w3-table w3-striped " style="text-align: center">
+    <tr>
+      <th style="color: white">You ask-</th>
+      <th style="color: white">I answer-</th>
+    </tr>
+    <tr>
+      <td>"What makes you want to be involved in multimedia?"</td>
+      <td>"I like how the medium is a good way to express my artistic side in any shape or form."</td>
+    </tr>
+    <tr>
+      <td style="color: white">"When illustrating, what do you prioritise the most?"</td>
+      <td style="color: white">"I mainly prioritise on wide angles to make my art look and feel dynamic."</td>
+    </tr>
+    <tr>
+      <td>"how do you manage to create while being a full-time student?"</td>
+      <td>"I divide student life and my illustrator life based on a strict timetable."</td>
+    </tr>
+	  <tr>
+      <td style="color: white">"how well do you work in a team?"</td>
+      <td style="color: white">"Im able to support an idea from my teamates as well as be vocal about my own ideas."</td>
+    </tr>
+  </table>
+</div>
+
+		<div class="parallax3"></div>
+
+	
+
+	 <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+	<script>
+      AOS.init({
+        duration: 3000,
+        once: true,
+      });
+		</script>
+</body>
+
+<footer class="w3-center w3-padding-24 w3-large" style="background: rgb(193, 154, 107)">
+	<div class="w3-content" style="max-width:1100px">
+   		<div class="w3-row" id="footer">
+    		<div class="w3-col m6 w3-padding-large w3-hide-small w3-left-align">
+	  			<div class="w3-container" id="leftside">
+					<div class="w3-large w3-section w3-left-align w3-padding">
+					<a href="index.html"   class="w3-hover-text-amber">Home</a><br>
+	    			<a href="About.html"   class="w3-hover-text-amber">About</a><br>
+	    			<a href="Contacts.html"  class="w3-hover-text-amber">Contact</a><br>
+					</div>
+				</div>
+			</div>
+	    	<div class="w3-col m6 w3-padding-large w3-hide-small w3-right-align">
+				<div class="w3-container" id="rightside">
+  					<div class="w3-xlarge w3-section w3-right-align w3-padding">
+    					<a href="https://instagram.com/mier_murtazza?igshid=YmMyMTA2M2Y=" target="_blank"><i class="fa fa-instagram w3-hover-opacity"></i></a><br>
+    					<a href="https://pin.it/4vGPSt2" target="_blank"><i class="fa fa-pinterest-p w3-hover-opacity"></i></a><br>
+    					<a href="https://twitter.com/Mier07762801?t=gp5h3agqluMxSUER_YxSWA&s=09" target="_blank"><i class="fa fa-twitter w3-hover-opacity"></i></a><br>
+  					</div>
+				</div>
+			</div>
+	   </div>
+		<hr class="w3-border-amber">
+		  <p>Copyright © 2020 Ahmad Amier Murtazza Bin Busu</p>
+	</div>
+</footer>
+</html>

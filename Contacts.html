@@ -1,0 +1,155 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+	<title>Contacts</title>
+
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Amatic+SC">
+
+	<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
+
+	<script>
+function validateForm()
+{
+var valid=true;
+if (document.form.Name.value=='')
+	{
+	alert('Pls fill in name');
+	document.form.Name.focus();
+	valid=false;
+	}
+
+if (document.form.Email.value=='')
+	{
+	alert('Pls fill in your email address');
+	document.form.Email.focus();
+	valid=false;
+	}
+
+if (document.form.Message.value=='')
+	{
+	alert('Pls specify what you wana to ask ');
+	document.form.Message.focus();
+	valid=false;
+	}
+		
+if((document.form.purpose[0].checked == false) && (document.form.purpose[1].checked == false))
+	{
+	alert('Pls clarify the purpose of your query');
+	valid=false;
+	}
+}
+
+
+
+</script>
+	<style>
+		@font-face{
+	src: url("Fonts/Joan/Joan-Regular.ttf");
+    font-family:Joan;
+	}
+	
+	@font-face{
+	src: url("Fonts/fany_harlley/Fany Harlley.ttf");
+	font-family:fany_harlley;
+	}
+	
+body, html {
+	height: 100%
+	}
+body,h1,h2,h3,h4,h5,h6 {font-family: "Joan", sans-serif}
+
+#h1,#h2,#h3,#h4,#h5,#h6 {font-family: "fany_harlley", sans-serif}
+
+	</style>
+</head>
+
+<body style="background: rgb(242, 232, 220);margin:0;">
+
+
+	<div class="w3-top">
+  		<div class="w3-bar  w3-white w3-wide w3-padding w3-card">
+    		<a href="index.html"  class="w3-bar-item w3-button"> AHMAD AMIER</a>
+    <!-- Float links to the right. Hide them on small screens -->
+    		<div class="w3-right w3-hide-small">
+      		<a href="index.html"  class="w3-bar-item w3-button">Home</a>
+      		<a href="About.html"  class="w3-bar-item w3-button">About</a>
+      		<a href="Contacts.html"  class="w3-bar-item w3-button">Contact</a>
+    		</div>
+  		</div>
+	</div>
+	<div class="w3-content" style="max-width:1100px">
+	  <!-- Contact -->
+   <div class="w3-row w3-padding-64" id="about">
+    <div class="w3-col m6 w3-padding-large w3-hide-small">
+	  <img src="contactme.jpg" alt="contact" class="w3-image" width="500" height="500">
+	</div>
+	    <div class="w3-col m6 w3-padding-large">
+	<div class="w3-container" id="contactform">
+    <h2 class="w3-center">Contact</h2>
+	<p>"If theres anything thats unclear about me or any potential business proposition, feel free to send me a messege"</p>
+    <i class="fa fa-map-marker" style="width:30px"></i> Arau, Perlis<br>
+    <i class="fa fa-phone" style="width:30px"></i> Phone: +013 229 8758<br>
+    <i class="fa fa-envelope" style="width:30px"> </i> Email: am13r@gmail.com<br>
+    <p>Questions? Go ahead, ask them:</p>
+    <form name="form" action="Contact.php"  method="post" onsubmit="return validateForm()">
+      <p><input class="w3-input w3-border" type="text" placeholder="Name" name="Name" ></p>
+      <p><input class="w3-input w3-border" type="text" placeholder="Email" name="Email" ></p>
+      <p><input class="w3-input w3-border" type="text" placeholder="Message" name="Message" ></p>
+	  <p>How can I help you with?</p>
+  <input type="radio" id="GI" name="purpose" value="purpose">
+  <label for="html">General Inquiry</label><br>
+  <input type="radio" id="S" name="purpose" value="purpose">
+  <label for="css">Sponsorship/working with me</label>
+
+		<p>Could you share your opinions of what you like in this website?</p>
+
+  <input type="checkbox" >
+  <label for="vehicle1"> It was very informative</label><br>
+  <input type="checkbox" >
+  <label for="vehicle2"> I like it's style</label><br>
+  <input type="checkbox" >
+  <label for="vehicle3"> I like how it's layout of the pages are</label><br><br>  
+  <label for="cars">Where are you from:</label>
+  <select name="location" id="location">
+    <option value="local">Local</option>
+    <option value="foreign">Foreign</option>
+  </select><br><br>
+        
+		<input type="submit" class="w3-button w3-green w3-third" value="Send a Message">
+    </form>
+  </div>
+</div>
+	  </div>
+</div>
+</body>
+<footer class="w3-center w3-padding-24 w3-large" style="background: rgb(193, 154, 107)">
+	<div class="w3-content" style="max-width:1100px">
+   		<div class="w3-row" id="footer">
+    		<div class="w3-col m6 w3-padding-large w3-hide-small w3-left-align">
+	  			<div class="w3-container" id="leftside">
+					<div class="w3-large w3-section w3-left-align w3-padding">
+					<a href="index.html"   class="w3-hover-text-amber">Home</a><br>
+	    			<a href="About.html"   class="w3-hover-text-amber">About</a><br>
+	    			<a href="Contacts.html"  class="w3-hover-text-amber">Contact</a><br>
+					</div>
+				</div>
+			</div>
+	    	<div class="w3-col m6 w3-padding-large w3-hide-small w3-right-align">
+				<div class="w3-container" id="rightside">
+  					<div class="w3-xlarge w3-section w3-right-align w3-padding">
+    					<a href="https://instagram.com/mier_murtazza?igshid=YmMyMTA2M2Y=" target="_blank"><i class="fa fa-instagram w3-hover-opacity"></i></a><br>
+    					<a href="https://pin.it/4vGPSt2" target="_blank"><i class="fa fa-pinterest-p w3-hover-opacity"></i></a><br>
+    					<a href="https://twitter.com/Mier07762801?t=gp5h3agqluMxSUER_YxSWA&s=09" target="_blank"><i class="fa fa-twitter w3-hover-opacity"></i></a><br>
+  					</div>
+				</div>
+			</div>
+	   </div>
+		<hr class="w3-border-amber">
+		  <p>Copyright © 2020 Ahmad Amier Murtazza Bin Busu</p>
+	</div>
+</footer>
+</html>
